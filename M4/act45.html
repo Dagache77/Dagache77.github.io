@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora els diferents tipus de RAID i les seves característiques.">
+    <title>Tipus de RAID</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex-grow: 1;
+        }
+
+        .hero {
+            background-color: #ff0800;
+            color: rgb(255, 238, 0);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .album-image {
+            width: 100%;
+            height: auto; /* Ajuste automático de altura */
+            object-fit: contain; /* Mantiene la imagen completa */
+        }
+
+        .highlight-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d9534f;
+            text-transform: uppercase;
+            border-bottom: 2px solid #d9534f;
+            padding-bottom: 5px;
+            margin-top: 20px;
+        }
+
+        .subsection {
+            background-color: #f9f9f9;
+            border-left: 4px solid #d9534f;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#inicio">RAID</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#raid0">Raid 0</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#raid1">Raid 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#raid5">Raid 5</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#raid6">Raid 6</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#raid10">Raid 10</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Alerta de bienvenida -->
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>¡Bienvenido/a!</strong> Descobreix què és un RAID i cada tipus de RAID.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="inicio" data-aos="zoom-in">
+        <h1>Tipus de RAID</h1>
+        <p>Explora els diferents tipus de RAID i les seves característiques.</p>
+    </section>
+
+    <!-- Sección ¿Qué es un RAID? -->
+    <section class="container mt-5" data-aos="fade-up">
+        <h2 class="highlight-title">¿Qué és un RAID?</h2>
+        <p>RAID (Redundant Array of Independent Disks) és una tecnologia d'emmagatzematge que combina múltiples unitats de disc dur en una sola unitat lògica per millorar la rendiment, la seguretat de dades o ambdues. El RAID es pot utilitzar per proporcionar redundància de dades, permetent la recuperació d'informació en cas de fallada d'una unitat, així com per millorar les velocitats de lectura i escriptura al distribuir la càrrega entre diverses unitats.</p>
+        <img src="/M4/raid.png" alt="Imatge de RAID" class="img-fluid mt-3"> <!-- Aquí se añade la imagen -->
+    </section>
+
+    <!-- Carrusel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/M4/raid0.png" alt="Raid 0" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block"><h3>Raid 0</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/M4/raid1.png" alt="Raid 1" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block"><h3>Raid 1</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/M4/raid5.png" alt="Raid 5" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block"><h3>Raid 5</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/M4/raid6.png" alt="Raid 6" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block"><h3>Raid 6</h3></div>
+            </div>
+            <div class="carousel-item">
+                <img src="/M4/raid10.png" alt="Raid 10" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block"><h3>Raid 10</h3></div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- Seccions per a cada tipus de RAID -->
+    <section id="raid0" class="container mt-5" data-aos="fade-right">
+        <h2 class="highlight-title">Raid 0</h2>
+        <div class="card">
+            <img src="/M4/raid0.png" class="card-img-top album-image" alt="Raid 0">
+            <div class="card-body">
+                <h5 class="card-title">Raid 0</h5>
+                <p class="card-text">Utilitza les capacitats de lectura/escriptura de dues o més unitats de disc dur que treballen juntes per maximitzar la performance de l'emmagatzematge d'informació.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="raid1" class="container mt-5" data-aos="fade-right">
+        <h2 class="highlight-title">Raid 1</h2>
+        <div class="card">
+            <img src="/M4/raid1.png" class="card-img-top album-image" alt="Raid 1">
+            <div class="card-body">
+                <h5 class="card-title">Raid 1</h5>
+                <p class="card-text">Proporciona confiança de les dades en cas d'un error de disc únic. Quan una unitat de disc falla, totes les dades estan disponibles immediatament a l'altre sense cap impacte a la integritat de les dades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="raid5" class="container mt-5" data-aos="fade-right">
+        <h2 class="highlight-title">Raid 5</h2>
+        <div class="card">
+            <img src="/M4/raid5.png" class="card-img-top album-image" alt="Raid 5">
+            <div class="card-body">
+                <h5 class="card-title">Raid 5</h5>
+                <p class="card-text">Una configuració redundant de matriu de discs independents que utilitza la distribució de discos amb paritat. Ofereix un bon equilibri entre rendiment i seguretat de dades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="raid6" class="container mt-5" data-aos="fade-right">
+        <h2 class="highlight-title">Raid 6</h2>
+        <div class="card">
+            <img src="/M4/raid6.png" class="card-img-top album-image" alt="Raid 6">
+            <div class="card-body">
+                <h5 class="card-title">Raid 6</h5>
+                <p class="card-text">Similar a Raid 5, inclou un disc de reserva que entra en funcionament una vegada que un dels discos es fa malbé. Permet la fallada de dues unitats sense pèrdua de dades.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="raid10" class="container mt-5" data-aos="fade-right">
+        <h2 class="highlight-title">Raid 10</h2>
+        <div class="card">
+            <img src="/M4/raid10.png" class="card-img-top album-image" alt="Raid 10">
+            <div class="card-body">
+                <h5 class="card-title">Raid 10</h5>
+                <p class="card-text">Combinació de Raid 0 i Raid 1. Ofereix tant una excel·lent velocitat com una alta redundància, ideal per a sistemes crítics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center p-3 mt-5">
+        <p>&copy; 2024 Daniel Agache - Mòdul 04: Sistemes operatius en xarxa. Tots els drets reservats.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
