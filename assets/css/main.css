@@ -160,7 +160,7 @@ h6 {
 .header .profile-img img {
   margin: 15px auto;
   display: block;
-  width: 120px;
+  width: 80px; /* Cambiado a un tamaño más pequeño */
   border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
@@ -958,10 +958,13 @@ section,
 }
 
 .testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 50%;
+  width: 150px; /* Cambia el tamaño según tu preferencia */
+  height: 150px; /* Asegura que tenga la misma altura */
+  object-fit: cover; /* Ajusta la imagen sin distorsionar */
+  border-radius: 50%; /* Para mantener las imágenes redondas */
   margin: 0 auto;
 }
+
 
 .testimonials .testimonial-item h3 {
   font-size: 18px;
